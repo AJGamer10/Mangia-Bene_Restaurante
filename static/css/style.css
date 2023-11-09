@@ -99,7 +99,7 @@ header {
     width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1020px) {
     .intro-container {
         width: 100%;
         flex-direction: column;
@@ -118,6 +118,7 @@ header {
     text-align: justify;
     display: flex;
     flex-direction: column;
+    padding-left: 2.5em;
     padding-right: 2.5em;
 }
 
