@@ -30,7 +30,7 @@ header {
 }
 
 .hero-container h1 span {
-    border: 6px solid  white;
+    border: 6px solid white;
     border-radius: 15px;
     padding: 6px 14px;
     display: inline-block;
@@ -67,20 +67,60 @@ header {
     -webkit-user-select: none;
     touch-action: manipulation;
     will-change: transform;
-   }
-   
-   .hero-container button:disabled {
+}
+
+.hero-container button:disabled {
     pointer-events: none;
-   }
-   
-   .hero-container button:hover {
+}
+
+.hero-container button:hover {
     color: #fff;
     background-color: rgb(48, 33, 14);
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
-   }
-   
-   .hero-container button:active {
+}
+
+.hero-container button:active {
     box-shadow: none;
     transform: translateY(0);
-   }
+}
+
+/* Intro */
+
+.intro-container {
+    background-color: #cfcfcf;
+    display:flex;
+    justify-content:space-between;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    padding-top: 2.5em;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .intro-container {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.intro-container img {
+    border-radius: 0%;
+    height: 550px;
+    width: 550px;
+    border: 4px solid rgb(77, 49, 13);
+    object-fit: cover;
+}
+
+.intro-text-container {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2.5em;
+}
+
+.intro-text-container h2 {
+    text-align: center;
+}
