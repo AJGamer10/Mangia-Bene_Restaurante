@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="static/css/style.css">
     <script src="static/js/jquery-3.7.1.min.js"></script>
+    <script src="static/js/jquery.validate.min.js"></script>
+    <script src="static/js/jquery.mask.min.js"></script>
     <script src="static/js/script.js"></script>
     <title>Cadastro</title>
 </head>
@@ -21,7 +23,7 @@
     <div class="filter-darkbrown">
         <main class="register-container">
             <h1 class="h1-resgister">Registrar</h1>
-            <form id="register-users">
+            <form id="registerUsers">
                 <div class="input-group">
                     <input class="input" required autocomplete="off" type="text" name="username" id="usernameSignup">
                     <label class="label" for="usernameSignup">Nome de usuário</label>
@@ -36,12 +38,13 @@
                     <label class="label" for="passwordSignup">Senha</label>
                 </div>
                 <div class="input-group">
-                    <input class="input" required autocomplete="off" type="password" name="password"
+                    <input class="input" required autocomplete="off" type="password" name="passwordConfirm"
                         id="passwordConfirmSignup">
                     <label class="label" for="passwordConfirmSignup">Confirmar senha</label>
                 </div>
                 <div class="d-grid">
-                    <button type="submit" class="btn bt-lg btn-login"><i class="bi bi-door-open"></i>
+                    <button type="submit" class="btn bt-lg btn-login" id="submitSignupButton"><i
+                            class="bi bi-door-open"></i>
                         Cadastrar</button>
                 </div>
             </form>
