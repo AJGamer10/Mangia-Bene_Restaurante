@@ -40,7 +40,7 @@ header {
     font-weight: 700;
     text-transform: uppercase;
 }
-  
+
 /* Intro Image */
 .hero-image {
     position: relative;
@@ -128,7 +128,7 @@ header {
 }
 
 .hero-container h1 span {
-    border: 6px solid  white;
+    border: 6px solid white;
     border-radius: 15px;
     padding: 6px 14px;
     display: inline-block;
@@ -165,20 +165,21 @@ header {
     -webkit-user-select: none;
     touch-action: manipulation;
     will-change: transform;
-   }
-   
-   .hero-container button:disabled {
+}
+
+.hero-container button:disabled {
     pointer-events: none;
-   }
-   
-   .hero-container button:hover {
+}
+
+.hero-container button:hover {
     color: #fff;
     background-color: rgb(48, 33, 14);
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
-   }
-   
-   .hero-container button:active {
+}
+
+.hero-container button:active {
     box-shadow: none;
     transform: translateY(0);
-   }
+}
+
