@@ -1,5 +1,3 @@
-const isPasswordSame = (password, passwordConfirm) => password === passwordConfirm
-
 $(document).ready(() => {
     // Cadastramento de usuários
     const $formSignup = $('#registerUsers');
@@ -7,11 +5,32 @@ $(document).ready(() => {
     const $emailSignup = $('#emailSignup');
     const $passwordSignup = $('#passwordSignup');
     const $passwordConfirmSignup = $('#passwordConfirmSignup');
-    const $formSignupInputs = [$usernameSignup, $emailSignup, $passwordSignup, $passwordConfirmSignup];
+    const $formSignupInputs = $('.input');
 
     const signup = () => {
 
     };
+
+    $formSignupInputs.on('focus', function() {
+        if ($(this).next().hasClass('invalid-feedback')){
+            $(this).next().next().addClass('input-selec');
+        } else {
+            $(this).next().addClass('input-selec');
+        }
+    })
+
+    $formSignupInputs.on('blur', function() {
+        const val = $(this).val();
+        if (val) {
+            if ($(this).next().hasClass('invalid-feedback')){
+                $(this).next().addClass('input-selec');
+            } else {
+                $(this).next().addClass('input-selec');
+            }
+        } else {
+            $(this).next().removeClass('input-selec');
+        }
+    })
 
     $formSignup.validate({
         submitHandler: (form, event) => {
@@ -42,7 +61,7 @@ $(document).ready(() => {
             },
             passwordConfirm: {
                 required: true,
-                isPasswordSame: true
+                equalTo: '#passwordSignup',
             }
         },
         messages: {
@@ -58,10 +77,8 @@ $(document).ready(() => {
             },
             passwordConfirm: {
                 required: "Por favor, confirme a senha...",
-                isPasswordSame: "As senhas não são iguais..."
+                equalTo: "As senhas não são iguais..."
             }
         }
     });
-
-    jQuery.validator.addMethod("isPasswordSame", value => isPasswordSame(value, $passwordSignup.val()));
 });
