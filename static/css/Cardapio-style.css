@@ -1,0 +1,22 @@
+/* Adiciona uma borda lateral à área de pedidos */
+#area-pedidos {
+    border-right: 1px solid #dee2e6;
+    padding-right: 15px;
+}
+
+/* Estilo adicional para a área de pedidos */
+.pedido-item {
+    margin-bottom: 10px;
+}
+
+/* Estilo para o total */
+#total {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para os botões + e - */
+.btn-adicionar-remover {
+    margin-right: 5px;
+}
