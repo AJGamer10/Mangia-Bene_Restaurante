@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Cardapio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="static/css/style-cardapio.css">
+    <script src="static/js/jquery-3.7.1.min.js"></script>
+    <script src="static/js/cardapio.js"></script>
+</head>
+
+<body>
+    <header
+        class="d-flex justify-content-between mb-3 align-items-center navbar navbar-dark navbar-expand-lg sticky-top bg-white">
+        <div class="titulo-logo d-flex align-items-center">
+            <img src="static/img/logo-sem-fundo.png" class="d-block" alt="logo do site" height="70">
+            <h1 class="ms-3">Mangia Bene</h1>
+        </div>
+        <div class="justify-content-between column-gap-3 d-none d-md-flex">
+            <button class="btn" type="button" aria-label="login" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <i class="bi bi-person-circle fs-1"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="text-center mb-4">Cardápio Italiano</h1>
+        <!-- Pratos Principais -->
+        <h2>Pratos Principais</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Margherita</h5>
+                        <p class="card-text">Molho de tomate, mozzarella fresca, manjericão e azeite de oliva.</p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-margherita">25,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-margherita">-</button>
+                            <span id="counter-margherita">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-margherita">+</button>
+                            <span>R$ <span id="sum-margherita"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Napolitana</h5>
+                        <p class="card-text">Molho de tomate, mozzarella, tomate fresco, alho, orégano e azeite de
+                            oliva.</p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-napolitana">25,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-napolitana">-</button>
+                            <span id="counter-napolitana">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-napolitana">+</button>
+                            <span>R$ <span id="sum-napolitana"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Quatro Queijos</h5>
+                        <p class="card-text">Mozzarella, gorgonzola, parmesão e queijo de cabra.</p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-queijos">25,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-queijos">-</button>
+                            <span id="counter-queijos">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-queijos">+</button>
+                            <span>R$ <span id="sum-queijos"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pepperoni</h5>
+                        <p class="card-text">Molho de tomate, mozzarella e pepperoni.</p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-pepperoni">30,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-pepperoni">-</button>
+                            <span id="counter-pepperoni">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-pepperoni">+</button>
+                            <span>R$ <span id="sum-pepperoni"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Calabresa</h5>
+                        <p class="card-text">Molho de tomate, mozzarella e linguiça calabresa.</p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-calabresa">30,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-calabresa">-</button>
+                            <span id="counter-calabresa">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-calabresa">+</button>
+                            <span>R$ <span id="sum-calabresa"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Funghi</h5>
+                        <p class="card-text">Molho de tomate, mozzarella e cogumelos.</p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-funghi">25,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-funghi">-</button>
+                            <span id="counter-funghi">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-funghi">+</button>
+                            <span>R$ <span id="sum-funghi"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Total das Pizzas</h5>
+                        <div class="preco">
+                            <span>R$ <span id="sum-total-pizza"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bebidas -->
+        <h2 class="mt-4">Bebidas</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Vinho Tinto</h5>
+                        <p class="card-text">Vinho tinto italiano de alta qualidade.</p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-vinho">25,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-vinho">-</button>
+                            <span id="counter-vinho">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-vinho">+</button>
+                            <span>R$ <span id="sum-vinho"></span></span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Aperol Spritz</h5>
+                            <p class="card-text">Um coquetel refrescante feito com Aperol, Prosecco e água com gás,
+                                servido com uma fatia de laranja.</p>
+                                <div class="preco">
+                                    <span>R$ <span class="valor-aperol">25,00</span></span>
+                                    <button class="btn btn-outline-danger" id="decrementButton-aperol">-</button>
+                                    <span id="counter-aperol">0</span>
+                                    <button class="btn btn-outline-primary" id="incrementButton-aperol">+</button>
+                                    <span>R$ <span id="sum-aperol"></span></span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Negroni</h5>
+                            <p class="card-text">Um coquetel clássico italiano feito com gin, vermute tinto e Campari,
+                                geralmente guarnecido com uma fatia de laranja.</p>
+                                <div class="preco">
+                                    <span>R$ <span class="valor-negroni">25,00</span></span>
+                                    <button class="btn btn-outline-danger" id="decrementButton-negroni">-</button>
+                                    <span id="counter-negroni">0</span>
+                                    <button class="btn btn-outline-primary" id="incrementButton-negroni">+</button>
+                                    <span>R$ <span id="sum-negroni"></span></span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Prosecco</h5>
+                            <p class="card-text">Um vinho espumante italiano, semelhante ao champanhe, muitas vezes
+                                usado para fazer coquetéis, como o já mencionado Aperol Spritz.</p>
+                                <div class="preco">
+                                    <span>R$ <span class="valor-prosecco">25,00</span></span>
+                                    <button class="btn btn-outline-danger" id="decrementButton-prosecco">-</button>
+                                    <span id="counter-prosecco">0</span>
+                                    <button class="btn btn-outline-primary" id="incrementButton-prosecco">+</button>
+                                    <span>R$ <span id="sum-prosecco"></span></span>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Total das Bedidas</h5>
+                            <div class="preco">
+                                <span>R$ <span id="sum-total-bebidas"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Total do Pedido</h5>
+                            <div class="resumo">
+                                <span>R$ <span id="sum-total"></span></span>
+                                <button class="btn btn-outline-primary" id="Button-fazer-pedido">Realizar Pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>
