@@ -158,3 +158,45 @@ button:active {
 .intro-button {
     max-width: fit-content;
 }
+
+/* Intro - After */
+.intro-after {
+    position: sticky;
+    top: 0;
+    background: url("../img/old-restaurante.jpg") center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 500px;
+    overflow: hidden;
+}
+
+.intro-after-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 1.5em;
+}
+
+.intro-after h3 {
+    color: RGB(248, 88, 11);
+    padding: 10px;
+}
+
+.intro-after p, h1 {
+    color: #fff;
+    padding: 10px;
+}
+
+.hero-container button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
