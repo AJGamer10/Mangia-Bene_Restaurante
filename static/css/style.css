@@ -4,6 +4,7 @@ html,
 body {
     font-family: 'Exo 2', sans-serif !important;
     margin-top: -16px;
+    margin: 0;
     padding: 0px;
 }
 
@@ -187,6 +188,7 @@ header {
     text-transform: uppercase;
     border: 1px solid;
     border-radius: 1.5em;
+    
 }
 
 .intro-after h3 {
@@ -197,4 +199,70 @@ header {
 .intro-after p, h1 {
     color: #fff;
     padding: 10px;
+}
+
+/* Card */
+.card-container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid white;
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: rgba(77, 49, 13, 0.301);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+}
+
+.card:hover .card-body {
+    right: 0;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500px;
+}
+
+.card-sub-title {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300px;
+}
+
+.card-info {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 40px 0;
+    font-weight: 400;
 }
