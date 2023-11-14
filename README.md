@@ -22,6 +22,10 @@ A aplicação consiste em um protótipo de app de restaurante, onde o cliente po
 git clone git@github.com:AJGamer10/Mangia-Bene_Restaurante.git
 ```
 
+# Trello do projeto
+
+https://trello.com/b/5PL5HghZ/entra-21-metodologias-%C3%A1geis
+
 # Autores
 
 Yuri Campos <br>
