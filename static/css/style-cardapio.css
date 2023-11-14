@@ -1,0 +1,16 @@
+.preco{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+button{
+    margin: 20px;
+}
+
+.resumo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    vertical-align: middle;
+}

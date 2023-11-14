@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,9 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/style-cardapio.css">
     <script src="static/js/jquery-3.7.1.min.js"></script>
-    <script src="static/js/script.js"></script>
+    <script src="static/js/cardapio.js"></script>
 </head>
 
 <body>
@@ -41,7 +42,13 @@
                     <div class="card-body">
                         <h5 class="card-title">Margherita</h5>
                         <p class="card-text">Molho de tomate, mozzarella fresca, manjericão e azeite de oliva.</p>
-                        <p class="card-text"><strong>R$ 25,00</strong></p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-margherita">25,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-margherita">-</button>
+                            <span id="counter-margherita">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-margherita">+</button>
+                            <span>R$ <span id="sum-margherita"></span></span>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
@@ -49,64 +56,73 @@
                         <h5 class="card-title">Napolitana</h5>
                         <p class="card-text">Molho de tomate, mozzarella, tomate fresco, alho, orégano e azeite de
                             oliva.</p>
-                        <p class="card-text"><strong>R$ 25,00</strong></p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-napolitana">25,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-napolitana">-</button>
+                            <span id="counter-napolitana">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-napolitana">+</button>
+                            <span>R$ <span id="sum-napolitana"></span></span>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Quatro Queijos</h5>
                         <p class="card-text">Mozzarella, gorgonzola, parmesão e queijo de cabra.</p>
-                        <p class="card-text"><strong>R$ 25,00</strong></p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-queijos">25,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-queijos">-</button>
+                            <span id="counter-queijos">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-queijos">+</button>
+                            <span>R$ <span id="sum-queijos"></span></span>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Pepperoni</h5>
                         <p class="card-text">Molho de tomate, mozzarella e pepperoni.</p>
-                        <p class="card-text"><strong>R$ 25,00</strong></p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-pepperoni">30,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-pepperoni">-</button>
+                            <span id="counter-pepperoni">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-pepperoni">+</button>
+                            <span>R$ <span id="sum-pepperoni"></span></span>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Calabresa</h5>
                         <p class="card-text">Molho de tomate, mozzarella e linguiça calabresa.</p>
-                        <p class="card-text"><strong>R$ 25,00</strong></p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-calabresa">30,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-calabresa">-</button>
+                            <span id="counter-calabresa">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-calabresa">+</button>
+                            <span>R$ <span id="sum-calabresa"></span></span>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Funghi</h5>
                         <p class="card-text">Molho de tomate, mozzarella e cogumelos.</p>
-                        <p class="card-text"><strong>R$ 25,00</strong></p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-funghi">25,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-funghi">-</button>
+                            <span id="counter-funghi">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-funghi">+</button>
+                            <span>R$ <span id="sum-funghi"></span></span>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Prosciutto e Rúcula</h5>
-                        <p class="card-text">Molho de tomate, mozzarella, presunto cru e rúcula.</p>
-                        <p class="card-text"><strong>R$ 25,00</strong></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Capricciosa</h5>
-                        <p class="card-text">Molho de tomate, mozzarella, presunto, cogumelos, azeitonas e alcachofras.
-                        </p>
-                        <p class="card-text"><strong>R$ 25,00</strong></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Diavola</h5>
-                        <p class="card-text">Molho de tomate, mozzarella, pepperoni e pimenta.</p>
-                        <p class="card-text"><strong>R$ 25,00</strong></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Frutti di Mare</h5>
-                        <p class="card-text">Molho de tomate, mozzarella, frutos do mar (camarão, mexilhões, lulas).</p>
-                        <p class="card-text"><strong>R$ 25,00</strong></p>
+                        <h5 class="card-title">Total das Pizzas</h5>
+                        <div class="preco">
+                            <span>R$ <span id="sum-total-pizza"></span></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,14 +135,12 @@
                     <div class="card-body">
                         <h5 class="card-title">Vinho Tinto</h5>
                         <p class="card-text">Vinho tinto italiano de alta qualidade.</p>
-                        <p class="card-text"><strong>R$ 30,00</strong></p>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Limoncello</h5>
-                            <p class="card-text">Um licor doce de limão, geralmente servido gelado como digestivo após
-                                as refeições.</p>
-                            <p class="card-text"><strong>R$ 30,00</strong></p>
+                        <div class="preco">
+                            <span>R$ <span class="valor-vinho">25,00</span></span>
+                            <button class="btn btn-outline-danger" id="decrementButton-vinho">-</button>
+                            <span id="counter-vinho">0</span>
+                            <button class="btn btn-outline-primary" id="incrementButton-vinho">+</button>
+                            <span>R$ <span id="sum-vinho"></span></span>
                         </div>
                     </div>
                     <div class="card">
@@ -134,7 +148,13 @@
                             <h5 class="card-title">Aperol Spritz</h5>
                             <p class="card-text">Um coquetel refrescante feito com Aperol, Prosecco e água com gás,
                                 servido com uma fatia de laranja.</p>
-                            <p class="card-text"><strong>R$ 30,00</strong></p>
+                                <div class="preco">
+                                    <span>R$ <span class="valor-aperol">25,00</span></span>
+                                    <button class="btn btn-outline-danger" id="decrementButton-aperol">-</button>
+                                    <span id="counter-aperol">0</span>
+                                    <button class="btn btn-outline-primary" id="incrementButton-aperol">+</button>
+                                    <span>R$ <span id="sum-aperol"></span></span>
+                                </div>
                         </div>
                     </div>
                     <div class="card">
@@ -142,23 +162,13 @@
                             <h5 class="card-title">Negroni</h5>
                             <p class="card-text">Um coquetel clássico italiano feito com gin, vermute tinto e Campari,
                                 geralmente guarnecido com uma fatia de laranja.</p>
-                            <p class="card-text"><strong>R$ 30,00</strong></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Espresso</h5>
-                            <p class="card-text">Um café curto e concentrado, uma parte essencial da cultura do café na
-                                Itália.</p>
-                            <p class="card-text"><strong>R$ 30,00</strong></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Cappuccino</h5>
-                            <p class="card-text">Café espresso misturado com vaporizado de leite e coberto com espuma de
-                                leite.</p>
-                            <p class="card-text"><strong>R$ 30,00</strong></p>
+                                <div class="preco">
+                                    <span>R$ <span class="valor-negroni">25,00</span></span>
+                                    <button class="btn btn-outline-danger" id="decrementButton-negroni">-</button>
+                                    <span id="counter-negroni">0</span>
+                                    <button class="btn btn-outline-primary" id="incrementButton-negroni">+</button>
+                                    <span>R$ <span id="sum-negroni"></span></span>
+                                </div>
                         </div>
                     </div>
                     <div class="card">
@@ -166,30 +176,31 @@
                             <h5 class="card-title">Prosecco</h5>
                             <p class="card-text">Um vinho espumante italiano, semelhante ao champanhe, muitas vezes
                                 usado para fazer coquetéis, como o já mencionado Aperol Spritz.</p>
-                            <p class="card-text"><strong>R$ 30,00</strong></p>
+                                <div class="preco">
+                                    <span>R$ <span class="valor-prosecco">25,00</span></span>
+                                    <button class="btn btn-outline-danger" id="decrementButton-prosecco">-</button>
+                                    <span id="counter-prosecco">0</span>
+                                    <button class="btn btn-outline-primary" id="incrementButton-prosecco">+</button>
+                                    <span>R$ <span id="sum-prosecco"></span></span>
+                                </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Gin Tônica Italiano</h5>
-                            <p class="card-text">Uma variação do clássico gin tônica, usando gin italiano e guarnecido
-                                com zimbro, limão siciliano ou manjericão.</p>
-                            <p class="card-text"><strong>R$ 30,00</strong></p>
+                            <h5 class="card-title">Total das Bedidas</h5>
+                            <div class="preco">
+                                <span>R$ <span id="sum-total-bebidas"></span></span>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Lambrusco</h5>
-                            <p class="card-text">Um vinho espumante frisante italiano, frequentemente servido como
-                                aperitivo.</p>
-                            <p class="card-text"><strong>R$ 30,00</strong></p>
+                            <h5 class="card-title">Total do Pedido</h5>
+                            <div class="resumo">
+                                <span>R$ <span id="sum-total"></span></span>
+                                <button class="btn btn-outline-primary" id="Button-fazer-pedido">Realizar Pedido</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card" <div class="card-body">
-                        <h5 class="card-title">Grappa</h5>
-                        <p class="card-text">Uma aguardente italiana destilada a partir de restos de uvas após o
-                            processo de vinificação, geralmente servida como digestivo.</p>
-                        <p class="card-text"><strong>R$ 30,00</strong></p>
                     </div>
                 </div>
             </div>
