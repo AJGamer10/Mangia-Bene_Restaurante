@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-html, body {
-    font-family: 'Exo 2', sans-serif !important;  
+html,
+body {
+    font-family: 'Exo 2', sans-serif !important;
     margin-top: -16px;
     padding: 0px;
 }
+
 header {
     padding-inline: 20px !important;
     border-bottom: 1px solid gray;
@@ -54,7 +56,7 @@ header {
 }
 
 /* Default Button */
-button {
+.default-button {
     appearance: none;
     background-color: rgb(77, 49, 13);
     border: 0.125em solid #1A1A1A;
@@ -80,18 +82,18 @@ button {
     will-change: transform;
 }
 
-button:disabled {
+.default-button:disabled {
     pointer-events: none;
 }
 
-button:hover {
+.default-button:hover {
     color: #fff;
     background-color: rgb(48, 33, 14);
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
 }
 
-button:active {
+.default-button:active {
     box-shadow: none;
     transform: translateY(0);
 }
@@ -157,4 +159,41 @@ button:active {
 
 .intro-button {
     max-width: fit-content;
+}
+
+/* Intro - After */
+.intro-after {
+    position: sticky;
+    top: 0;
+    background: url("../img/old-restaurante.jpg") center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 500px;
+    overflow: hidden;
+}
+
+.intro-after-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 1.5em;
+}
+
+.intro-after h3 {
+    color: RGB(248, 88, 11);
+    padding: 10px;
+}
+
+.intro-after p, h1 {
+    color: #fff;
+    padding: 10px;
 }
